@@ -3,7 +3,8 @@
 import numpy as np
 import cv2
 
-capture = cv2.VideoCapture(0)
+#capture = cv2.VideoCapture(0)
+capture = cv2.VideoCapture('vid.mp4')
 c = 80
 flag = False
 
@@ -36,6 +37,7 @@ while True:
     #res = cv2.circle(res, (int(pointInScreen[0]),int(pointInScreen[1])), 10, (0, 0, 255), -1)
 
     result = cv2.circle(result, (int(avg[0][0]), int(avg[0][1])), 10, (0, 0, 255), -1)
+    print('x=' + str(avg[0][0]) + ' y=' + str(avg[0][1]))
 
     cv2.imshow("videonormal", frame)
     cv2.imshow("videohsv", hsv)

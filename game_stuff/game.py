@@ -96,6 +96,7 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
+                pygame.quit()
             if event.type == COLLISION_EVENT:
                 ship_health -= 1
         if ship_health < 0:
