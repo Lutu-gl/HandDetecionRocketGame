@@ -128,7 +128,7 @@ def handle_meteors(meteors, ship_rect):
         if ship_rect.colliderect(meteor):  # check collision
             pygame.event.post(pygame.event.Event(COLLISION_EVENT))
             meteors.remove(meteor)
-        if meteor.y > HEIGHT or meteor.x > WIDTH or meteor.x < 0 - METEOR_WIDTH or meteor.y < 0 - METEOR_HEIGHT:
+        elif meteor.y > HEIGHT or meteor.x > WIDTH or meteor.x < 0 - METEOR_WIDTH or meteor.y < 0 - METEOR_HEIGHT:
             meteors.remove(meteor)
 
 
